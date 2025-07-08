@@ -1,8 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-
 
 #define MAC_DEFAULT     0
 #define WIN_DEFAULT     1
@@ -11,11 +11,6 @@
 #define MAC_LOWER       4
 #define MAC_RAISE       5
 #define MAC_ADJUST      6
-
-
-#define MOUSE 4
-#define SCROLL 5
-#define NUM 6
 
 &mt {
     flavor = "balanced";
@@ -47,15 +42,6 @@
     };
 
     behaviors {
-//        lt_to_layer_0: lt_to_layer_0 {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "LAYER_TAP_TO_0";
-//            bindings = <&mo>, <&to_layer_0>;
-//
-//            #binding-cells = <2>;
-//            tapping-term-ms = <200>;
-//        };
-
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
